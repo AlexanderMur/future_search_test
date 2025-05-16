@@ -1,0 +1,12 @@
+{
+    "require": {
+    },
+    "autoload": {
+        "files": [
+            "inc/template-functions.php"
+        ],
+        "psr-4": {
+            "FS\\": "inc/"
+        }
+    }
+}
