@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.color-secondary {
+  color: #888888;
+}
+
+.color-success {
+  color: #008000
+}
+
+.color-danger {
+  color: #800000
+}
+
+main {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.header-container {
+  padding: 30px;
+  background: #F4F4F4;
+}
+
+.nav-container {
+  background: #D9D9D9;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.menu .menu-item {
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.text-header {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.text-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.text-body {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  color: #888888;
+}
+
+.text-info {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.text-warning {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-grow: 1;
+  gap: 30px;
+  width: 100%;
+}
+
+.main-content {
+  padding: 30px;
+  background: #F4F4F4;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 30px;
+}
+
+.sidebar {
+  align-self: flex-start;
+  width: 293px;
+  padding: 30px;
+  background: #F4F4F4;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.article {
+  display: flex;
+  background: #FFFFFF;
+}
+
+.article_image {
+  flex-shrink: 0;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+}
+
+.article_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article_main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+}
+
+.article_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-button {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  display: inline-flex;
+}
+.paginate-links {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+}
+.paginate-links .page-numbers {
+  min-width: 32px;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 14px;
+}
+.paginate-links .current {
+  padding: 5px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+}
+.paginate-links .prev, .paginate-links .next {
+  font-weight: 700;
+  font-size: 14px;
+}
+/*.liked .like-button{*/
+/*  opacity: 0;*/
+/*  user-select: none;*/
+/*}*/
+/*.disliked .dislike-button{*/
+/*  opacity: 0;*/
+/*  user-select: none;*/
+/*}*/
+.footer-container {
+  width: 100%;
+  margin-top: 30px;
+  background: #F4F4F4;
+  padding: 30px;
+}
+.paginate-links-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  main {
+    width: 100%;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  main {
+    width: 100%;
+  }
+
+  .text-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .text-body {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .article {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .article_image {
+    width: 100%;
+  }
+  
+  .paginate-links {
+    gap: 5px;
+  }
+  .paginate-links-mobile {
+    display: flex;
+  }
+  .paginate-links-desktop {
+    display: none;
+  }
+}
