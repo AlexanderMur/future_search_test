@@ -113,7 +113,7 @@ class Likes
                 'is_like' => 1,
                 'ip'      => $ip,
                 'url'     => $url,
-                'date' => time(),
+                'date' => date("Y-m-d H:i:s"),
             ]);
         }
         
@@ -132,7 +132,7 @@ class Likes
                 'is_like' => 0,
                 'ip'      => $ip,
                 'url'     => $url,
-                'date'    => time(),
+                'date'    => date("Y-m-d H:i:s"),
             ]);
         }
     } 
